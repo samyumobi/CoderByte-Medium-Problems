@@ -26,3 +26,27 @@ if(count2==0){
     }
 return mode;
 }
+
+
+## Code in Python
+
+def ArrayChallenge(arr):
+  m = c2 = 0
+
+  for i in range(len(arr)):
+    c = 0
+    for j in range(len(arr)):
+      if arr[i] == arr[j] and i!=j:
+        c += 1
+      if c > c2:
+        m = arr[i]
+        c2 = c
+        c = 0
+  if c2 == 0:
+    return -1
+  else:
+    return m
+
+
+# keep this function call here 
+print ArrayChallenge(raw_input())
